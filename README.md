@@ -59,7 +59,7 @@ The structure of this project looks something like this:
 * Add two pictures to the `img/students` folder (they can be jpg or png files): 
   * student_name.jpg
   * student_name_background.jpg
-  * Add one HTML file to the students/ folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created.
+  * Add one HTML file to the `students/` folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created.
 
 ## Branching and Merging
 A branch is like another "copy" of your repository that you can make modifications to. Suppose you start working on "Project v.1", then you copy it to "Project v.2" to work on a big change (just in case it doesn't work and you want to revert). If it works out, you can copy the changes you made in Project v.2 back into Project v.1 ("merging", in Git). If it doesn't work, you can just delete Project v.2 and try again.
@@ -67,24 +67,24 @@ A workflow like this is nice because you can easily undo if you realize the chan
 
 
 ### Procedure
-In this assignment, we're going to make a new branch called `add-my-profile-page` and make our change to that copy. When we're done, we'll commit it (to `add-my-profile-page`) and then merge `add-my-profile-page` back into the master to send to GitHub.
+In this assignment, we're going to make a new branch called `add-my-profile-page` and make our change to that copy. When we're done, we'll commit it (to `add-my-profile-page`) and then merge `add-my-profile-page` back into the `master` to send to GitHub.
 
 1.	Configure your credentials. Configure your user name with the command `git config --global user.name “your user name”`. You configure your email with the similar command `git config --global user.email “your email address”`. Check your changes by typing `git config user.name` and `git config user.email`.
 
 2.	Clone your copy of the repository: `git clone https:// SWEngatFontbonne.github.io/`
 
-3.	See what branch we're on: `git branch` (the * beside master means we're on that branch)
+3.	See what branch we're on: `git branch` (the * beside `master` means we're on that branch)
 
 4.	Make a new branch: `git checkout -b add-my-profile-page` (the -b means "make a new branch")
 
-5.	See what branch we're on: `git branch` (You'll see 2 branches, with the * beside add-my-profile-page)
+5.	See what branch we're on: `git branch` (You'll see 2 branches, with the * beside `add-my-profile-page`)
 
 6.	In this new branch, make a new HTML file in the `students/` folder. The file name should be your name. Use the file `student_name.html` to see an example of what a profile's HTML could look like.
-  *For instance, we would create a file `john_adams.html` in the main students folder.
+  * For instance, we would create a file `john_adams.html` in the main students folder.
   
 7.	Still in this branch you created, add the two photos detailed above to the `img/students` folder. 
-  *For example, we would add the pic titled `john_adams.jpg` to the `students` folder inside `img` folder.
-  *File endings are case senstive. When adding an <image> tag, make sure that the image source is identical to the name of the image file.
+  * For example, we would add the pic titled `john_adams.jpg` to the `students` folder inside `img` folder.
+  * File endings are case senstive. When adding an <image> tag, make sure that the image source is identical to the name of the image file.
   
 8.	Once you've completed the profile, open up `index.html`. Use the pre-existing template as a model and add a section for your profile.
 
@@ -103,10 +103,10 @@ In this assignment, we're going to make a new branch called `add-my-profile-page
 14.	Open `index.html` again. Notice that your name isn't in it (because the change is in `add-my-profile-page`)
 
 15.	Merge `add-my-profile-page` into master: `git merge add-my-profile-page`
-  *While it is likely that this should go smoothly there is a possibility that you may encounter a merge conflict (because you may have changed some common content and git wouldn't know what to do). In this case Git asks for help. In this case look at what files it's confused about: `git status`
-  *You'll see `index.html` has a conflict, open it up in your favourite editor. Find lines like `<<<<<<<<<`, `===========`, and `>>>>>>>>>`. They show you the 2 versions Git has to choose from.
-  *Decide how to fix the file. Maybe it's one or the other. Maybe it's a combination: Change it to include both yours and your classmates changes.
-  *Test that change to make sure it works and then stage and commit your changes.
+  * While this step should go smoothly, there is a possibility of encountering a merge conflict (because you may have changed some common content and git wouldn't know what to do). In this case Git asks for help. Look at what files it's confused about: `git status`
+  * You'll see `index.html` has a conflict, open it up in your favourite editor. Find lines like `<<<<<<<<<`, `===========`, and `>>>>>>>>>`. They show you the 2 versions Git has to choose from.
+  * Decide how to fix the file. Maybe it's one or the other. Maybe it's a combination: Change it to include both yours and your classmates changes.
+  * Test the change to verify it works and then stage and commit.
 
 16.	Open up `index.html` again. Now you should see your name.
 
