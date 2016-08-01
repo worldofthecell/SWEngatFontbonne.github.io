@@ -69,9 +69,10 @@ A workflow like this is nice because you can easily undo if you realize the chan
 ### Procedure
 In this assignment, we're going to make a new branch called `add-my-profile-page` and make our change to that copy. When we're done, we'll commit it (to `add-my-profile-page`) and then merge `add-my-profile-page` back into the master to send to GitHub.
 
-*1.	Configure your credentials. Configure your user name with the command `git config --global user.name “your user name”`. You configure your email with the similar command `git config --global user.email “your email address”`. Check your changes by typing `git config user.name` and `git config user.email`.
+1.	Configure your credentials. Configure your user name with the command `git config --global user.name “your user name”`. You configure your email with the similar command `git config --global user.email “your email address”`. Check your changes by typing `git config user.name` and `git config user.email`.
 
-*2.	Clone your copy of the repository at https:// SWEngatFontbonne.github.io/
+2.	Clone your copy of the repository at https:// SWEngatFontbonne.github.io/
+
 3.	See what branch we're on: git branch (the * beside master means we're on that branch)
 4.	Make a new branch: git checkout -b add-my-profile-page (the -b means "make a new branch")
 5.	See what branch we're on: git branch You'll see 2 branches, with the * beside add-my-profile-page
