@@ -1,34 +1,52 @@
-# Fontbonne Software Engineering Page
+
+
+# Deploy on Day One
 
 ## Contents
 
 |Section                            |
 |-----------------------------------|
-|[Objectives](#objectives)          |
+|[History](#history)                |
 |[Assignment](#assignment)          |
 |[Requirements](#requirements)      |
 |[File Structure](#structure)       |
-|[Branching and Merging](#branch-and-merge)|
-|[Procedure](#procedure)            |
+|[Getting Started](#getting-started)|
+|[Next Steps](#next-steps)          |
+|[Final Steps](#final-steps)        |
+|[Resources](#resources)            |
+|[Issues](#issues)                  |
 
+## History
 
-## Objectives
-
-+Learning branching and merging workflow of Git
-+Working in a large team to develop software
-
+Welcome to Flatiron! Every semester, a student index page is created. It looks something like [this](http://students.flatironschool.com/). Links from this page go to individual profiles, which look like [this](http://students.flatironschool.com/students/lauraconwill.html).
 
 ## Assignment
 
-The objective is to develop a Software Engineering class page with personalized profiles to market our software engineering skills to the employers. The catch is that this will be one big group project with everyone in the class editing the same project folder. Just to clarify, we are not building a webapp with Java or Rails and JavaScript. We are just going to be working with HTML and file structures. 
+Your assignment is to create a student profile for someone sitting at your table. By the end of this project, every student should have a profile for themselves that was created by someone else and every student should have created a profile for someone else. If you're sitting at a table of four, it might be easiest to pair up. If you're sitting at a table of three, it might be easiest to create the profile of the student clockwise to you. If you're sitting at a...well you get the picture.
+
+Now if you're anything like me, you might be freaking out and wondering, "Am I making a webapp?!?!" The answer is no. You're just working with HTML and file structures. You don't need to know Rails, JavaScript, or even Ruby for this project. No need to freak out. Calm down! Seriously, you're making the rest of us nervous!!!
+
+You'll have about three hours to complete the first section of this lab. Use that time to get to know your table, get familiar with git workflows, and re-familiarizing yourself with HTML. If you feel stuck, ask any instructor for help. **Keep in mind everyone in your table will be pushing to the same repository.**  Think about using a workflow with your teammates that will minimize conflicts.
 
 ## Requirements
-Collect the following content for your profile.
-1.	A Profile picture (something normal, a headshot, of a reasonable size that can be easily cropped)
-2.	A background picture
-3.	A short bio
-4.	Taglines, favorites, social media profile links. (Not mandatory. You can customize this based on your personality)
 
+Please collect the following content from your assigned student for their profile. This content doesn't have to be finalized, but you need something. They'll be using this content as the project evolves for their resume and other profiles online.
+
+* Name
+* Github Username
+* Blog Url (if they don't already have a blog it will be their-github-username.github.io)
+* Tagline
+* Profile Picture (something normal, a headshot, of a good reusable size that can be easily cropped)
+* Background Picture
+* Treehouse Account
+* CoderWall Account
+* CodeSchool Account
+* Favorite Websites
+* Previous Work Experience
+* Short Bio
+* Twitter URL
+* LinkedIn URL
+* Education
 
 ## Structure
 
@@ -44,7 +62,8 @@ The structure of this project looks something like this:
 │   ├── lots of images here
 │   └── students
 │       ├── student_name_background.jpg
-│       └── student_name.jpg
+│       ├── student_name_index.jpg
+│       └── student_name_profile.jpg
 ├── index.html
 ├── js
 │   └── javascipt files
@@ -56,37 +75,153 @@ The structure of this project looks something like this:
 * The only file you'll alter is `index.html`. 
 
 ### Files you will need to add:
-* Add two pictures to the img/students folder (they can be jpg or png files): student_name.jpg and student_name_background.jpg
-Add one HTML file to the students/ folder. Use the student_name.html for reference. In fact, feel free to copy as much of the HTML from student_name.html into the new file you've created (just don't rename / override that file, as that will cause you some git headaches).
+* Add three pictures to the `img/students` folder (they can be jpg or png files):
+  * A background picture
+  * A picture for the index page
+  * A picture for the profile page
+* Add one HTML file to the `students/` folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created (just don't rename / override that file, as that will cause you some git headaches).
+
+## Getting Started
+
+### Group Logistics
+* Figure out who is going to write whose profile.
+
+* ![fork](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/fork.png)
+* Have one person at your table [fork](https://help.github.com/articles/fork-a-repo) this repo. This person should then send the link to their fork to everyone sitting at their table.
+* The person who forked the repo must add all team members as collaborators. Learn more about that [here](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
+
+* ![clone](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/clone.png)
+* Everyone at the table should then [clone](http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository) this forked repo.
+
+### Individual Instructions
+
+Now that you have the repo, you'll want to get into it. Remember [cd](http://linux.about.com/od/commands/a/Example-Uses-Of-The-Command-Cd.htm)? When you type `pwd` into your terminal and the last part of the text that gets returned is `deploy-on-day-1...` you're in the right place. **NOTE In all the hypothetical examples, we're writing a profile for Zoe Perez.**
+
+Take a look at `index.html` and `students/student_name.html` in the browser. You can do this many ways but one is by opening finder and right clicking on index.html. Then click on "Open with" then the name of your favorite browser.
+
+#### Make a New Branch
+
+* From the root directory, [checkout a new branch](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Branching). This new branch's name should be the name of the student whose profile you're going to create.  
+  * For instance, the branch would be titled `zoe-perez`.
+  * Note: The `master` branch of a project is NEVER a place to do any work. `master` is considered the build and you never break the build. So make sure you are not working or committing to the `master` branch.
+
+* If you haven't already, switch to the branch you created. To make sure you're where you need to be, type `git branch` in your terminal. It should return the name of your assigned student emphazised with an asterisk and master.
+  * For instance, typing `pwd` in the terminal would return:
+
+```text
+  master
+* zoe-perez
+```
+
+#### Add Profile
+
+* In this new branch, make a new HTML file in the `students/` folder. The file name should be the name of the student you're creating the profile for. Use the file `student_name.html` to see an example of what a profile's HTML could look like.
+  * For instance, we would create a file `zoe_perez.html` in the main `students` folder.
+
+* Still in this branch you created, add the three photos detailed above to the `img/students` folder. The student you're writing the profile for may have to email you their desired pictures or send you links to them, etc.
+  * For instance, we would add the pictures titled `zoe_perez_background.jpg`, `zoe_perez_index.jpg`, and `zoe_perez_profile.jpg` to the `students` folder that is inside the `img` folder.
+  * File endings are case senstive. When adding an \<image\> tag, make sure that the image source is identical to the name of the image file.
+
+* Once you've completed the profile, open up `index.html`. Use the prexisting template as a model and add a section for your fellow student.
+
+#### Stage and Commit Changes
+
+* Once you're happy with the profile you've created and the changes you've made to the index page, type [git status](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files). The the file you've altered, index.html, should appear in the "Tracked Files" section and the files you've created should appear in the "Untracked Files" section. 
+
+* You'll want to [add](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository#Staging-Modified-Files) then [commit](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes) these changes with a message.
+
+* If you type `git status`, you should see "nothing to commit, working directory clean". If you type `git remote -v`, it should display something like:
+
+|remote | url                                                               |         |
+|-------|-------------------------------------------------------------------|---------|
+|origin |https://github.com/table-member's-github-name/deploy-on-day-1...git| (fetch) |
+|origin |https://github.com/table-member's-github-name/deploy-on-day-1...git| (push)  |
+
+#### Push Up Your Branch 
+
+* Now it's time to [push](http://git-scm.com/book/en/Git-Basics-Working-with-Remotes#Pushing-to-Your-Remotes) to a remote branch. This remote branch doesn't exist yet, you're going to create it by pushing. 
+  * **NOTE: Do not push to master. Do not type anything that contains the word master!**
+  * You're going to push to a branch that is the same name as your local branch.
+    * For instance, if we're on the branch zoe-perez, we're going to push to zoe-perez.
+
+* To confirm this push worked you can do two things:
+  * Type ```git branch -a``` which will show the remote branch on github.com you just created when you pushed. 
+  * You could also go to the url of the forked repo. Notice the section that looks like ![branches](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/branches.png). You should be able to click on that arrow and to see a dropdown. From this dropdown, select the name of the branch you've been working on.
+
+## Next Steps
+
+### Group Logistics
+
+Since your table is going to submit a pull request with all of your tables profiles, you'll need to merge every branch that your table created into a single branch. This branch will contain every profile from your table. The process of merging these branches will probably result in merge conflicts in `index.html` and possibly elsewhere. That's totally okay and expected!
+
+Think about the best way to merge all the branches together. Should one person do it? Should everyone do it in order? Should you merge into a prexisting branch, like `master`, or create a totally new branch? You might be wondering what the best answer is but there isn't a "best answer", just decide on a strategy and go for it!
+
+### Merge Conflicts
+
+When [merging](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Merging), [merge conflicts](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Merge-Conflicts) can happen. Generally they look like:
+
+```text
+> git branch
+  └── master
+> git merge zoe-perez
+  └── Auto-merging index.html
+  └── CONFLICT (content): Merge conflict in index.html
+  └── Automatic merge failed; fix conflicts and then commit the result.
+```
+
+This just means that you will have to open the files where there are merge conflicts, in this case `index.html`, and find the part that looks like:
+
+```text
+<<<<<<< HEAD
+content here
+=======
+other content here
+>>>>>>> zoe-perez
+```
+
+Just decide which one you want to keep or if you want to keep both. Then delete the parts you don't want and delete the `<<<<HEAD`, `======`, and `>>>>>` parts. 
+
+Remember, if you have multiple files with merge conflicts, you'll have to repeat this process with each file. Once you're done selecting which code to retain, `git add` and `git commit` these changes. Now when you type `git status`, your terminal should not display "You have unmerged paths."
+
+## Final Steps
+
+Once every profile is on a single branch that is hosted remotely, it's time to submit a pull request on the original repo. Note: This pull request will be on behalf of your entire table.
+
+* The first step is to go to the forked repo. 
+* The next step is to navigate to the branch with all three or four profiles. You can do this by clicking on the ![branches](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/branches.png) dropdown and select the name of the branch that has all the profiles. 
+* From this new view, click on ![pull request](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/pull-request.png) on the right-hand menu. The green button with two arrows that looks like this ![green pull request](http://ironboard-curriculum-content.s3.amazonaws.com/web-development/deploy-on-day-1/green-button.png) will also work.
+* On this new page, click the green button that says "New pull request". This will take you to a form.
+Fill out the form and click "Submit".
+
+Congratulations, you've completed your first assignment! 
+
+Note: From now on, most assignments will be completed in a group but submitted individually. This means that instead of having a **table** fork an assignment, **each student** will fork the assignment, minimizing the merge conflicts you'll encounter in the future.
+
+## Resources
+
+* Git Step Resources
+  * [Forking a Repo](https://help.github.com/articles/fork-a-repo)
+  * [Cloning a Repo](http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository)
+  * [Branching](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Branching)
+  * [Adding](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository#Staging-Modified-Files)
+  * [Committing Changes](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes)
+  * [Pushing to Remote Branches](http://git-scm.com/book/en/Git-Basics-Working-with-Remotes#Pushing-to-Your-Remotes)
+  * [Merging Branches](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Merging)
+  * [Submitting a Pull Request](https://help.github.com/articles/using-pull-requests#sending-the-pull-request)
+* Git Workflow Resources
+  * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+  * [Git Workflow](https://github.com/diaspora/diaspora/wiki/Git-Workflow)
+  * [Git Rebase Workflow Explained](http://mettadore.com/analysis/a-simple-git-rebase-workflow-explained/)
+  * [How GitHub uses GitHub to Build GitHub](http://zachholman.com/talk/how-github-uses-github-to-build-github)
+  * [GitHub Workflow for Submitting Pull Requests](https://openshift.redhat.com/community/wiki/github-workflow-for-submitting-pull-requests)
+
+## Issues
+
+A common issue is not being able to authenticate with GitHub. You need to use HTTPS/SSH correctly when cloning the repository in order to be authenticated with GitHub. Checkout and follow:
+
+* [Setting Up Git](https://help.github.com/articles/set-up-git)
+* [HTTPS Cloning Errors](https://help.github.com/articles/https-cloning-errors)
+* [Setting Up SSH](https://help.github.com/articles/generating-ssh-keys)
 
 
-## branch-and-merge
-A branch is like another "copy" of your repository that you can make modifications to. Suppose you start working on "Project v.1", then you copy it to "Project v.2" to work on a big change (just in case it doesn't work and you want to revert). If it works out, you can copy the changes you made in Project v.2 back into Project v.1 ("merging", in Git). If it doesn't work, you can just delete Project v.2 and try again.
-A workflow like this is nice because you can easily undo if you realize the change you made isn't working. Git makes it super easy to go backwards and undo if you work on every new feature on its own branch and only merge when a feature is working (or "stable", as we call it in industry).
-
-
-### Procedure
-In this assignment, we're going to make a new branch called "add-my-profile-page" and make our change to that copy. When we're done, we'll commit it (to "add-my-profile-page") and then merge add-my-profile-page back into the master to send to GitHub.
-1.	Configure your credentials. Configure your user name with the code git config --global user.name “your user name”. You configure your email with the similar code git config --global user.email “your email address”. Check your changes by typing git config user.name and git config user.email.
-2.	Clone your copy of the repository at https:// SWEngatFontbonne.github.io/
-3.	See what branch we're on: git branch (the * beside master means we're on that branch)
-4.	Make a new branch: git checkout -b add-my-profile-page (the -b means "make a new branch")
-5.	See what branch we're on: git branch You'll see 2 branches, with the * beside add-my-profile-page
-6.	In this new branch, make a new HTML file in the students/ folder. The file name should be your name. Use the file student_name.html to see an example of what a profile's HTML could look like.
-o	For instance, we would create a file john_adams.html in the main students folder.
-7.	Still in this branch you created, add the photo detailed above to the img/students folder. 
-o	For example, we would add the pic titled john_adams.jpg to the students folder inside img folder.
-o	File endings are case senstive. When adding an <image> tag, make sure that the image source is identical to the name of the image file.
-8.	Once you've completed the profile, open up index.html. Use the pre-existing template as a model and add a section for your profile.
-9.	Test your change by firing up index.html in your local browser. If this was a project, you'd run your work and keep making changes until it worked. When everything works and you're ready to commit, go back to Git Bash
-10.	"Stage" your files for commit. 
-a)	Start by typing git status. The file you've altered, index.html, should appear in the "Tracked Files" section and the files you've created should appear in the "Untracked Files" section.
-b)	Now systematically run git add filename for every file that you updated and created.
-11.	Commit your change (to add-my-profile-page branch): git commit -m "Added my 1st page to index.html"
-12.	Switch back to master branch: git checkout master (note: no -b)
-13.	Open index.html again. Notice that your name isn't in it (because the change is in add-my-profile-page)
-14.	Merge add-my-profile-page into master: git merge add-my-profile-page
-15.	Open up index.html again. Now you should see your name.
-16.	Push your changes to GitHub: git push origin master
-17.	Go to github.io and see your changes
-18.	Keep your repository tidy! Delete your branch now that it's done: git branch -d add-my-profile-page.
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/deploy-on-day-1' title='Deploy on Day One'>Deploy on Day One</a> on Learn.co and start learning to code for free.</p>
