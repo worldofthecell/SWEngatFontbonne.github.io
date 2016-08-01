@@ -14,8 +14,8 @@
 
 ## Objectives
 
-*Learning branching and merging workflow of Git
-*Working in a large team to develop software
+* Learning branching and merging workflow of Git
+* Working in a large team to develop software
 
 
 ## Assignment
@@ -24,10 +24,10 @@ The objective is to develop a Software Engineering class page with personalized 
 
 ## Requirements
 Collect the following content for your profile.
-*A Profile picture (something normal, a headshot, of a reasonable size that can be easily cropped)
-*A background picture
-*A short bio
-*Taglines, favorites, social media profile links. (Not mandatory. You can customize this based on your personality)
+* A Profile picture (something normal, a headshot, of a reasonable size that can be easily cropped)
+* A background picture
+* A short bio
+* Taglines, favorites, social media profile links. (Not mandatory. You can customize this based on your personality)
 
 
 ## Structure
@@ -57,9 +57,9 @@ The structure of this project looks something like this:
 
 ### Files you will need to add:
 * Add two pictures to the `img/students` folder (they can be jpg or png files): 
-	*student_name.jpg
-	*student_name_background.jpg
-*Add one HTML file to the students/ folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created (just don't rename / override that file, as that will cause you some git headaches).
+  * student_name.jpg
+  * student_name_background.jpg
+  * Add one HTML file to the students/ folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created.
 
 ## Branching and Merging
 A branch is like another "copy" of your repository that you can make modifications to. Suppose you start working on "Project v.1", then you copy it to "Project v.2" to work on a big change (just in case it doesn't work and you want to revert). If it works out, you can copy the changes you made in Project v.2 back into Project v.1 ("merging", in Git). If it doesn't work, you can just delete Project v.2 and try again.
