@@ -13,7 +13,6 @@
 
 ## Objectives
 
-* Learning branching and merging workflow of Git
 * Working in a large team to develop software
 
 
@@ -59,11 +58,6 @@ The structure of this project looks something like this:
   * student_name.jpg
   * student_name_background.jpg
   * Add one HTML file to the `students/` folder. Use the `student_name.html` for reference. In fact, feel free to copy as much of the HTML from `student_name.html` into the new file you've created.
-
-## Branching and Merging
-A branch is like another "copy" of your repository that you can make modifications to. Suppose you start working on "Project v.1", then you copy it to "Project v.2" to work on a big change (just in case it doesn't work and you want to revert). If it works out, you can copy the changes you made in Project v.2 back into Project v.1 ("merging", in Git). If it doesn't work, you can just delete Project v.2 and try again.
-A workflow like this is nice because you can easily undo if you realize the change you made isn't working. Git makes it super easy to go backwards and undo if you work on every new feature on its own branch and only merge when a feature is working (or "stable", as we call it in industry).
-
 
 ### Procedure
 In this assignment, we're going to clone the repository and make our changes. When we're done, we'll commit it push into the `master` to send to GitHub.
