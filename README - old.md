@@ -8,6 +8,7 @@
 |[Assignment](#assignment)          |
 |[Requirements](#requirements)      |
 |[File Structure](#File Structure)       |
+|[Branching and Merging](#Branching and Merging)|
 |[Procedure](#Procedure)            |
 
 
@@ -29,7 +30,7 @@ Collect the following content for your profile.
 * Taglines, favorites, social media profile links. (Not mandatory. You can customize this based on your personality)
 
 
-## File Structure
+## Structure
 
 The structure of this project looks something like this:
 
@@ -66,7 +67,7 @@ A workflow like this is nice because you can easily undo if you realize the chan
 
 
 ### Procedure
-In this assignment, we're going to clone the repository and make our changes. When we're done, we'll commit it push into the `master` to send to GitHub.
+In this assignment, we're going to make a new branch called `add-MY-profile-page` and make our change to that copy. When we're done, we'll commit it (to `add-MY-profile-page`) and then merge `add-MY-profile-page` back into the `master` to send to GitHub.
 
 1.	Configure your credentials. Configure your user name with the command `git config --global user.name “your user name”`. You configure your email with the similar command `git config --global user.email “your email address”`. Check your changes by typing `git config user.name` and `git config user.email`.
 
